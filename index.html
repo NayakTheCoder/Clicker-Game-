@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker game !</title>
+    <style>
+        h1{
+            text-align: center;
+            font-family: cursive;
+        }
+        #button{
+            text-align: centers;
+            font-family: cursive;
+            width: 80px;
+            height: 25px;
+            border:2px solid black;
+            padding-left: 2px;
+        }
+        #div1{
+            text-align: center;
+            padding-left: 550px;
+            padding-top:120px;
+        }
+        #div1:hover{
+           color:red;
+           cursor: pointer;
+        }
+        #score{
+            font-family: cursive;
+            font-size: 20px;
+        }
+        #great{
+            font-size: 40px;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+     <h1>Clicker game !</h1>
+     <br>
+     <br>
+     <br>
+     <p id="score">score: <span>0</span></p>
+     <br>
+     <div id="div1">
+         <p id="button" >Click Me !</p>
+     </div>
+     <p id="great"></p>
+     
+</body>
+<script>
+    let score = 0;
+    let span = document.querySelector("span");
+    let button = document.getElementById("button");
+    let great = document.getElementById("great");  
+
+
+  button.addEventListener("click",myfunction);
+
+    function myfunction(){
+        score++;
+        span.innerHTML = score;
+
+        switch(score){
+            case 50:
+               great.innerHTML = "Great job ! carry on " 
+               break;
+            ;
+            case 100:
+               great.innerHTML = "well done" 
+               break;
+            ;
+            case 150:
+               great.innerHTML = "you can do it " 
+               break;
+            ;
+            case 200:
+               great.innerHTML = "just a little more" 
+               break;
+            ;
+            case 250:
+               great.innerHTML = "tired ?" 
+               break;
+            ;
+            case 300:
+               great.innerHTML = "OH MY GOD ! you are truly fabuolus" 
+               break;
+            ;
+            case 350:
+               great.innerHTML = " :):)" 
+               break;
+            ;
+        }
+    }
+       
+</script>
+</html>
